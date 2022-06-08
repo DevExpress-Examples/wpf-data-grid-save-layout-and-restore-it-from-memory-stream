@@ -4,8 +4,33 @@
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
         xmlns:local="clr-namespace:DXGrid_GridLayout" 
-        Title="Window1" Height="300" Width="442">
+        Title="Window1" Height="300" Width="450">
     <Grid>
-        <local:MainPage/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <dxg:GridControl x:Name="grid"
+                         dx:DXSerializer.StoreLayoutMode="All" 
+                         dxg:GridSerializationOptions.AddNewColumns="False" 
+                         dxg:GridSerializationOptions.RemoveOldColumns="False"
+                         UseFieldNameForSerialization="True">
+            <dxg:GridColumn FieldName="IssueName"/>
+            <dxg:GridColumn FieldName="IssueType"/>
+            <dxg:GridColumn FieldName="IsPrivate" Header="Private"/>
+            <dxg:GridControl.View>
+                <dxg:TableView AutoWidth="True"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Margin="1" Content="Add a New Column" Click="OnAddNewColumn"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Save Layout" Margin="1" Click="OnSaveLayout"/>
+                <Button Content="Restore Layout" Margin="1" Click="OnRestoreLayout" IsEnabled="{Binding IsLayoutSaved}"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
