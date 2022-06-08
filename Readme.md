@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1655)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# How to Save Grid Layout to and Restore It from a memory stream
+# WPF Data Grid - Save Layout and Restore It from a Memory Stream
 
 This example shows how to save the [GridControl](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl)'s layout to a memory stream. To do this, click the **Save Layout** button. Click the **Restore Layout** button to restore the saved layout.
 
