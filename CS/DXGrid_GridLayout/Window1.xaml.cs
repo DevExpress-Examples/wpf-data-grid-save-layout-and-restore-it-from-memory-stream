@@ -4,24 +4,15 @@ using System.Windows;
 
 namespace DXGrid_GridLayout {
     public partial class Window1 : Window {
-        public static readonly DependencyProperty IsLayoutSavedProperty =
-            DependencyProperty.Register("IsLayoutSaved", typeof(bool), typeof(Window1), null);
-        public bool IsLayoutSaved {
-            get { return (bool)GetValue(IsLayoutSavedProperty); }
-            set { SetValue(IsLayoutSavedProperty, value); }
-        }
         MemoryStream layoutStream;
         public Window1() {
-            DataContext = this;
             InitializeComponent();
-            IsLayoutSaved = false;
             grid.ItemsSource = IssueList.GetData();
         }
 
         void OnSaveLayout(object sender, RoutedEventArgs e) {
             layoutStream = new MemoryStream();
             grid.SaveLayoutToStream(layoutStream);
-            IsLayoutSaved = true;
         }
         void OnRestoreLayout(object sender, RoutedEventArgs e) {
             layoutStream.Position = 0;
