@@ -7,31 +7,16 @@ Namespace DXGrid_GridLayout
     Public Partial Class Window1
         Inherits Window
 
-        Public Shared ReadOnly IsLayoutSavedProperty As DependencyProperty = DependencyProperty.Register("IsLayoutSaved", GetType(Boolean), GetType(Window1), Nothing)
-
-        Public Property IsLayoutSaved As Boolean
-            Get
-                Return CBool(GetValue(IsLayoutSavedProperty))
-            End Get
-
-            Set(ByVal value As Boolean)
-                SetValue(IsLayoutSavedProperty, value)
-            End Set
-        End Property
-
         Private layoutStream As MemoryStream
 
         Public Sub New()
-            DataContext = Me
             Me.InitializeComponent()
-            IsLayoutSaved = False
             Me.grid.ItemsSource = IssueList.GetData()
         End Sub
 
         Private Sub OnSaveLayout(ByVal sender As Object, ByVal e As RoutedEventArgs)
             layoutStream = New MemoryStream()
             Me.grid.SaveLayoutToStream(layoutStream)
-            IsLayoutSaved = True
         End Sub
 
         Private Sub OnRestoreLayout(ByVal sender As Object, ByVal e As RoutedEventArgs)
