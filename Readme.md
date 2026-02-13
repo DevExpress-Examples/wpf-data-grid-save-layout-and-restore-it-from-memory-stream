@@ -29,7 +29,7 @@ This example shows how to save the [GridControl](http://docs.devexpress.com/WPF/
 * [WPF Data Grid - Exclude GridControl's Properties from Serialization](https://github.com/DevExpress-Examples/how-to-prevent-certain-gridcontrols-properties-from-being-serialized-t158989)
 * [WPF MVVM Framework - Serialize/Deserialize a View's Size and State with LayoutSerializationService and CurrentWindowSerializationBehavior](https://github.com/DevExpress-Examples/wpf-mvvm-behaviors-currentwindowserializationbehavior)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-save-layout-and-restore-it-from-memory-stream&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-data-grid-save-layout-and-restore-it-from-memory-stream&~~~was_helpful=no)
 
